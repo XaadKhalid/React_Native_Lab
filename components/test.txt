@@ -1,0 +1,50 @@
+12-11-22
+checkboxes wala ksi sy pochna ha kay yi kasy hota ha qn kay har checkboxes kay sath agr ek state bni jay to wo manage ho jati ha lekan agr sary checkboxes ko ek object mein raka jay or phir su ki state manage ki jay to us mei koi yaki huti ha yi ab koi Allah ka bnda hi bta skta ha.
+
+13-11-22
+Flat List or Section List kay keyExtractor or renderitem kay bary mein confirm karna ha yad sy
+
+flat list mein jo props aty hain wo data or renderitem or keyExtractor huty han or keyExtractor tab estaml huta ha jab ap jo array pas kar ray hain houn to us ki koi koi unique key define na ho ya ya us ka attriubut key na ho
+sectionlist mein mein jo props huty hain wo section keyExtractor or renderitem or rendersectionheader huty hain
+
+refresh wla agr smj a gya to bari bat ha aj
+27-11-22
+useeffect ka use kary uy haam table create karnin gain kay jab b signup ka page rneder ho ga to database mein table create ho jay ga
+mehtod us ka kcuh yi ho ga kay sb sy phely sql lite storage kay package install ho ga
+
+import {openDatabase} from 'sqllite storage community'
+
+main function kay andara kay 
+const db=openDatabase({name: "Databasename"});
+useeffect(()=>{
+    CreateTable();
+});
+
+CreateTable = () => {
+    db.transaction(txn => {
+        txn.executesql(
+            'create table if not exists TableName (id integer,name varchar(30),date date)',
+        [],
+        (sqltxn, res) => {
+            console.log('Created succesfully');
+        },
+        error => {
+            console.log('Error Occurred');
+        },
+    );
+    });
+};
+
+Aoa Miss mein ny ap sy pochna yi tha kay mery pas ek array of objects ha
+array=[
+    {id:1, name:'saad' age:21},
+    {id:2, name:'saad2' age:22},
+    {id:3, name:'saad3' age:23},
+    {id:4, name:'saad4' age:24}
+]
+ab mjy es par array kay esa function use karna ha kay mjy id or name ki based par age return ho jay
+var myname='saad2'
+var myid=2,
+var myarr = array.find((e)=>{
+      return e.id === myid && e.name === myname;
+});
