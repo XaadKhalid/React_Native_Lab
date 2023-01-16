@@ -1,6 +1,6 @@
 import React from 'react';
-import ScreenControl from './API_folder/Task_2/ScreenControl';
+import Apitest from './API_folder/Task_3/Apitest';
 
 export default function App() {
-  return <ScreenControl />;
+  return <Apitest />;
 }
