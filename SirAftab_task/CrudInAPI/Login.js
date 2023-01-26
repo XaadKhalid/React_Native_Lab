@@ -13,14 +13,6 @@ const Login = ({navigation}) => {
   const [uname, setUname] = useState('');
   const [upswd, setUpswd] = useState('');
 
-//   const requestOptions = {
-//     method: 'POST',
-//     headers: { 'Content-Type': 'application/json' },
-//     body: JSON.stringify({
-//         Sname: {uname},
-//         Spswd: {upswd},
-//     }),
-// };
   const Loginu = async () => {
     const response = await fetch(`http://192.168.43.90/MyAPI/api/user/Login?name=${uname}&password=${upswd}`);
     const data = await response.json();

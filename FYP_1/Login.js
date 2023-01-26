@@ -16,11 +16,13 @@ function Login({navigation}) {
     console.log('Login is pressed');
     navigation.navigate('Std_Screens');
   };
-  const imagebg = require('./Images/logo_2.png');
+
+  const imagebg = require('./Images/logo.png');
 
   return (
     <View style={Styles.container}>
       <Image source={imagebg} resizeMode="center" style={Styles.img} />
+
       <TextInput
         style={Styles.Inputoutside}
         placeholder="Email"

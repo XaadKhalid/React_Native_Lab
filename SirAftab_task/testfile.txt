@@ -1,0 +1,62 @@
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Net;
+using System.Net.Http;
+using System.Web;
+using System.Web.Http;
+using FlowerAPITask.Models;
+
+namespace FlowerAPITask.Controllers
+{
+    public class FlowersController : ApiController
+    {
+        readonly FlowerDBEntities db = new FlowerDBEntities();
+
+        [HttpGet]
+        public HttpResponseMessage GetAllFlowers()
+        {
+            try
+            {
+                return Request.CreateResponse(HttpStatusCode.OK, db.Flowers);
+            }
+            catch
+            {
+                return Request.CreateResponse(HttpStatusCode.InternalServerError);
+            }
+        }
+
+        [HttpPost]
+        public HttpResponseMessage UploadFlower()
+        {
+            try
+            {
+                var form = HttpContext.Current.Request.Form;
+                string flowerName = form["name"];
+                string userID = form["id"];
+                var files = HttpContext.Current.Request.Files;
+                DateTime dt = DateTime.Now;
+                string path = HttpContext.Current.Server.MapPath("~/Images");
+                if (!Directory.Exists(path))
+                {
+                    Directory.CreateDirectory(path);
+                }
+                string fileData = null;
+                for (int i = 0; i < files.Count; i++)
+                {
+                    fileData = $"{userID}_{dt.Year}_{dt.Month}_{dt.Day}_{dt.Hour}_{dt.Minute}_{dt.Second}_{dt.Millisecond}_{files[i].FileName}";
+                    files[i].SaveAs(path + "/" + fileData);
+                    Flower f = new Flower() { name = flowerName, image = fileData };
+                    db.Flowers.Add(f);
+                    db.SaveChanges();
+                }
+                return Request.CreateResponse(HttpStatusCode.OK, $"Image uploaded {flowerName}");
+            }
+            catch
+            {
+                return Request.CreateResponse(HttpStatusCode.InternalServerError);
+            }
+        }
+    }
+}
