@@ -15,7 +15,7 @@ import {launchImageLibrary} from 'react-native-image-picker';
 export default function Addflower({navigation}) {
   const [fname, setFname] = useState('');
   const [fprice, setFprice] = useState('');
-  const [imagedata, setImagedata] = useState('');
+  const [imagedata, setImagedata] = useState({});
 
   const requestExternalWritePermission = async () => {
     if (Platform.OS === 'android') {
@@ -63,44 +63,42 @@ export default function Addflower({navigation}) {
           Alert.alert(response.errorMessage);
           return;
         }
-        setImagedata(response.assets[0]);
+        setImagedata({
+          'uri' : response.assets[0].uri,
+          'name' : response.assets[0].fileName,
+          'type' : response.assets[0].type,
+        });
+        //setImagedata(response.assets[0]);
       });
     }
   };
 
-    // console.log('Name: ', imagedata.fileName);
-  // console.log('URI: ', imagedata.uri);
-  // console.log('Type: ', imagedata.type);
-
-  const image2 =  new FormData();
-  image2.append({
+  const formData =  new FormData();
+  const img = {
     uri: imagedata.uri,
     fileName: imagedata.fileName,
     type: imagedata.type,
-  });
+  };
+  // const data = new FormData();
+  // data.append('uri', imagedata.uri);
+  // data.append('fileName', imagedata.fileName);
+  // data.append('type',imagedata.type);
 
-  const data = new FormData();
-  // data.append({
-  //   'Fr_Name': fname,
-  //   'Fr_Price': fprice,
-  //   'Fr_Image': image2,
-  // });
-  data.append('Fr_Name', fname);
-  data.append('Fr_Price', fprice);
-  data.append('Fr_Image',image2);
+  formData.append('Fr_Name', fname);
+  formData.append('Fr_Price', fprice);
+  formData.append('Fr_Image', imagedata);
+
   const options = {
     method: 'POST',
-    headers: { 'Content-Type': 'multipart/form-data' },
-    body: data,
+    // headers: { 'Content-Type': 'multipart/form-data' },
+    body: formData,
   };
   const savedata = async () => {
-        const response = await fetch(
-      'http://192.168.43.90/MyAPI/api/user/insertdata',
-      options,
-    );
-    console.log('\nmessage form server ', response);
+    console.log('\nData stored in object of image is:--->\n', imagedata);
+    console.log('\nDetails send in Post method is:--->\n', formData);
+    const response = await fetch('http://192.168.43.90/MyAPI/api/user/insertdata', options);
+    console.log('\respone form server:--->', response.json);
     const result = await response.json();
-    console.log('Response From API: ' ,result);
     Alert.alert(result);
   };
   return (
@@ -129,8 +127,7 @@ export default function Addflower({navigation}) {
       <TouchableOpacity
         style={styles.btn2}
         onPress={() => {
-          console.log('\nImage data: ', image2);
-          console.log('\nobject to be send in post body', data);
+          console.log('\nImagedata on picking image from gallery:--->', imagedata);
           savedata();
         }}>
         <Text style={styles.btntxt}>Save Data</Text>

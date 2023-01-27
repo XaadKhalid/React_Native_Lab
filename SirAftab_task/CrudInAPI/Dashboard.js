@@ -28,33 +28,33 @@ const Dashboard = ({navigation}) => {
     setFlrlist(data);
   };
   return (
-    <ScrollView>
+    //<ScrollView>
       <View>
-      <Text>List of Flowers</Text>
-      <FlatList
-        data={flrlist}
-        renderItem={({item}) => {
-          return (
-            <ScrollView>
-              <View>
-                <Text>ID: {item.id}</Text>
-                <Text>Name: {item.Fr_Name}</Text>
-                <Text>Price: PKR {item.Fr_Price}</Text>
-                <Image source={item.Fr_Image} style={styles.img} />
-              </View>
-            </ScrollView>
-          );
-        }}
-      />
-      <TouchableOpacity
+        <TouchableOpacity
         style={styles.btn}
         onPress={() => {
           shift();
         }}>
         <Text style={styles.btntxt}>Add Flowers</Text>
       </TouchableOpacity>
+      <Text>List of Flowers</Text>
+      <View>
+      <FlatList
+        data={flrlist}
+        renderItem={({item}) => {
+          return (
+              <View>
+                <Text>ID: {item.id}</Text>
+                <Text>Name: {item.Fr_Name}</Text>
+                <Text>Price: PKR {item.Fr_Price}</Text>
+                <Image source={item.Fr_Image} style={styles.img} />
+              </View>
+          );
+        }}
+      />
+      </View>
     </View>
-    </ScrollView>
+    //</ScrollView>
   );
 };
 

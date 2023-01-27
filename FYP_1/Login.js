@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import React, {useState} from 'react';
 import {
   View,
@@ -62,7 +63,7 @@ const Styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#497174', //color1 497174
+    backgroundColor: '#497174', 
   },
   font: {
     fontSize: 20,
@@ -72,13 +73,13 @@ const Styles = StyleSheet.create({
     paddingVertical: 15,
     marginBottom: 10,
     width: '75%',
-    backgroundColor: '#EFF5F5', //color3
+    backgroundColor: '#EFF5F5', 
     textAlign: 'center',
     color: '#000000',
     elevation: 10,
   },
   button: {
-    backgroundColor: '#EB6440', //color2
+    backgroundColor: '#EB6440',
     paddingVertical: 15,
     paddingHorizontal: 90,
     borderRadius: 12,
