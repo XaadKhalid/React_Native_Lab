@@ -1,3 +1,4 @@
+/* eslint-disable react-native/no-inline-styles */
 /* eslint-disable prettier/prettier */
 import CheckBox from '@react-native-community/checkbox';
 import React, {useState} from 'react';
@@ -34,9 +35,57 @@ export default function S_Shedule() {
           <View style={{marginTop: 9}}>
             <Text style={styles.header_txt}>03:30-04:30 PM</Text>
           </View>
+          <View style={{marginTop: 8}}>
+            <Text style={styles.header_txt}>04:30-05:30 PM</Text>
+          </View>
+          <View style={{marginTop: 8}}>
+            <Text style={styles.header_txt}>05:30-06:30 PM</Text>
+          </View>
+          <View style={{marginTop: 9}}>
+            <Text style={styles.header_txt}>06:30-07:30 PM</Text>
+          </View>
+          <View style={{marginTop: 9}}>
+            <Text style={styles.header_txt}>07:30-08:30 PM</Text>
+          </View>
+          <View style={{marginTop: 9}}>
+            <Text style={styles.header_txt}>08:30-09:30 PM</Text>
+          </View>
+          <View style={{marginTop: 8}}>
+            <Text style={styles.header_txt}>09:30-10:30 PM</Text>
+          </View>
+          <View style={{marginTop: 8}}>
+            <Text style={styles.header_txt}>10:30-11:30 PM</Text>
+          </View>
+          <View style={{marginTop: 8}}>
+            <Text style={styles.header_txt}>11:30-12:30 AM</Text>
+          </View>
         </View>
         <View style={styles.days_header}>
           <Text style={styles.header_txt}>Mon</Text>
+          <View>
+            <CheckBox value={mon} onValueChange={() => setMon(true)} />
+          </View>
+          <View>
+            <CheckBox value={mon} onValueChange={() => setMon(true)} />
+          </View>
+          <View>
+            <CheckBox value={mon} onValueChange={() => setMon(true)} />
+          </View>
+          <View>
+            <CheckBox value={mon} onValueChange={() => setMon(true)} />
+          </View>
+          <View>
+            <CheckBox value={mon} onValueChange={() => setMon(true)} />
+          </View>
+          <View>
+            <CheckBox value={mon} onValueChange={() => setMon(true)} />
+          </View>
+          <View>
+            <CheckBox value={mon} onValueChange={() => setMon(true)} />
+          </View>
+          <View>
+            <CheckBox value={mon} onValueChange={() => setMon(true)} />
+          </View>
           <View>
             <CheckBox value={mon} onValueChange={() => setMon(true)} />
           </View>
@@ -88,6 +137,30 @@ export default function S_Shedule() {
           <View>
             <CheckBox value={mon} onValueChange={() => setMon(true)} />
           </View>
+          <View>
+            <CheckBox value={mon} onValueChange={() => setMon(true)} />
+          </View>
+          <View>
+            <CheckBox value={mon} onValueChange={() => setMon(true)} />
+          </View>
+          <View>
+            <CheckBox value={mon} onValueChange={() => setMon(true)} />
+          </View>
+          <View>
+            <CheckBox value={mon} onValueChange={() => setMon(true)} />
+          </View>
+          <View>
+            <CheckBox value={mon} onValueChange={() => setMon(true)} />
+          </View>
+          <View>
+            <CheckBox value={mon} onValueChange={() => setMon(true)} />
+          </View>
+          <View>
+            <CheckBox value={mon} onValueChange={() => setMon(true)} />
+          </View>
+          <View>
+            <CheckBox value={mon} onValueChange={() => setMon(true)} />
+          </View>
         </View>
         <View style={styles.days_header}>
           <Text style={styles.header_txt}>Wed</Text>
@@ -113,11 +186,59 @@ export default function S_Shedule() {
             <CheckBox value={mon} onValueChange={() => setMon(true)} />
           </View>
           <View>
-            <CheckBox value={mon} onValueChange={value => setMon({value})} />
+            <CheckBox value={mon} onValueChange={()=> setMon(true)} />
+          </View>
+          <View>
+            <CheckBox value={mon} onValueChange={() => setMon(true)} />
+          </View>
+          <View>
+            <CheckBox value={mon} onValueChange={() => setMon(true)} />
+          </View>
+          <View>
+            <CheckBox value={mon} onValueChange={() => setMon(true)} />
+          </View>
+          <View>
+            <CheckBox value={mon} onValueChange={() => setMon(true)} />
+          </View>
+          <View>
+            <CheckBox value={mon} onValueChange={() => setMon(true)} />
+          </View>
+          <View>
+            <CheckBox value={mon} onValueChange={() => setMon(true)} />
+          </View>
+          <View>
+            <CheckBox value={mon} onValueChange={() => setMon(true)} />
+          </View>
+          <View>
+            <CheckBox value={mon} onValueChange={() => setMon(true)} />
           </View>
         </View>
         <View style={styles.days_header}>
           <Text style={styles.header_txt}>Thu</Text>
+          <View>
+            <CheckBox value={mon} onValueChange={() => setMon(true)} />
+          </View>
+          <View>
+            <CheckBox value={mon} onValueChange={() => setMon(true)} />
+          </View>
+          <View>
+            <CheckBox value={mon} onValueChange={() => setMon(true)} />
+          </View>
+          <View>
+            <CheckBox value={mon} onValueChange={() => setMon(true)} />
+          </View>
+          <View>
+            <CheckBox value={mon} onValueChange={() => setMon(true)} />
+          </View>
+          <View>
+            <CheckBox value={mon} onValueChange={() => setMon(true)} />
+          </View>
+          <View>
+            <CheckBox value={mon} onValueChange={() => setMon(true)} />
+          </View>
+          <View>
+            <CheckBox value={mon} onValueChange={() => setMon(true)} />
+          </View>
           <View>
             <CheckBox value={mon} onValueChange={() => setMon(true)} />
           </View>
@@ -169,9 +290,108 @@ export default function S_Shedule() {
           <View>
             <CheckBox value={mon} onValueChange={() => setMon(true)} />
           </View>
+          <View>
+            <CheckBox value={mon} onValueChange={() => setMon(true)} />
+          </View>
+          <View>
+            <CheckBox value={mon} onValueChange={() => setMon(true)} />
+          </View>
+          <View>
+            <CheckBox value={mon} onValueChange={() => setMon(true)} />
+          </View>
+          <View>
+            <CheckBox value={mon} onValueChange={() => setMon(true)} />
+          </View>
+          <View>
+            <CheckBox value={mon} onValueChange={() => setMon(true)} />
+          </View>
+          <View>
+            <CheckBox value={mon} onValueChange={() => setMon(true)} />
+          </View>
+          <View>
+            <CheckBox value={mon} onValueChange={() => setMon(true)} />
+          </View>
+          <View>
+            <CheckBox value={mon} onValueChange={() => setMon(true)} />
+          </View>
         </View>
         <View style={styles.days_header}>
           <Text style={styles.header_txt}>Sat</Text>
+          <View>
+            <CheckBox value={mon} onValueChange={() => setMon(true)} />
+          </View>
+          <View>
+            <CheckBox value={mon} onValueChange={() => setMon(true)} />
+          </View>
+          <View>
+            <CheckBox value={mon} onValueChange={() => setMon(true)} />
+          </View>
+          <View>
+            <CheckBox value={mon} onValueChange={() => setMon(true)} />
+          </View>
+          <View>
+            <CheckBox value={mon} onValueChange={() => setMon(true)} />
+          </View>
+          <View>
+            <CheckBox value={mon} onValueChange={() => setMon(true)} />
+          </View>
+          <View>
+            <CheckBox value={mon} onValueChange={() => setMon(true)} />
+          </View>
+          <View>
+            <CheckBox value={mon} onValueChange={() => setMon(true)} />
+          </View>
+          <View>
+            <CheckBox value={mon} onValueChange={() => setMon(true)} />
+          </View>
+          <View>
+            <CheckBox value={mon} onValueChange={() => setMon(true)} />
+          </View>
+          <View>
+            <CheckBox value={mon} onValueChange={() => setMon(true)} />
+          </View>
+          <View>
+            <CheckBox value={mon} onValueChange={() => setMon(true)} />
+          </View>
+          <View>
+            <CheckBox value={mon} onValueChange={() => setMon(true)} />
+          </View>
+          <View>
+            <CheckBox value={mon} onValueChange={() => setMon(true)} />
+          </View>
+          <View>
+            <CheckBox value={mon} onValueChange={() => setMon(true)} />
+          </View>
+          <View>
+            <CheckBox value={mon} onValueChange={() => setMon(true)} />
+          </View>
+        </View>
+        <View style={styles.days_header}>
+          <Text style={styles.header_txt}>Sun</Text>
+          <View>
+            <CheckBox value={mon} onValueChange={() => setMon(true)} />
+          </View>
+          <View>
+            <CheckBox value={mon} onValueChange={() => setMon(true)} />
+          </View>
+          <View>
+            <CheckBox value={mon} onValueChange={() => setMon(true)} />
+          </View>
+          <View>
+            <CheckBox value={mon} onValueChange={() => setMon(true)} />
+          </View>
+          <View>
+            <CheckBox value={mon} onValueChange={() => setMon(true)} />
+          </View>
+          <View>
+            <CheckBox value={mon} onValueChange={() => setMon(true)} />
+          </View>
+          <View>
+            <CheckBox value={mon} onValueChange={() => setMon(true)} />
+          </View>
+          <View>
+            <CheckBox value={mon} onValueChange={() => setMon(true)} />
+          </View>
           <View>
             <CheckBox value={mon} onValueChange={() => setMon(true)} />
           </View>
@@ -211,21 +431,21 @@ export default function S_Shedule() {
 
 const styles = StyleSheet.create({
   main_container: {
-    padding: 10,
-    backgroundColor: '#497174', //f5f2ef ,, b3cf cf cb 
+    paddingHorizontal: 10,
+    backgroundColor: '#FFFFFF',
     height: '100%',
   },
   row: {
     flexDirection: 'row',
     alignItems: 'baseline',
-    marginTop: 10,
-    backgroundColor: '#EFF5F5',
+    //backgroundColor: '#FFFFFF',
   },
   time_header: {
-    flex: 3,
+    flex: 4,
+    marginBottom: 5,
   },
   header_txt: {
-    color: '#000000'
+    color: '#000000',
   },
   days_header: {
     flex: 1,

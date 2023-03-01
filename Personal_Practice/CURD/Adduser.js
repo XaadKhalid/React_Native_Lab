@@ -19,7 +19,7 @@ export default function Adduser() {
 
   useEffect(() => {
     createTable();
-  });
+  }[]);
 
   function createTable() {
     db.transaction(txn => {

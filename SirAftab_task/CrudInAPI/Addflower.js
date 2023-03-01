@@ -79,10 +79,6 @@ export default function Addflower({navigation}) {
     fileName: imagedata.fileName,
     type: imagedata.type,
   };
-  // const data = new FormData();
-  // data.append('uri', imagedata.uri);
-  // data.append('fileName', imagedata.fileName);
-  // data.append('type',imagedata.type);
 
   formData.append('Fr_Name', fname);
   formData.append('Fr_Price', fprice);
@@ -96,7 +92,7 @@ export default function Addflower({navigation}) {
   const savedata = async () => {
     console.log('\nData stored in object of image is:--->\n', imagedata);
     console.log('\nDetails send in Post method is:--->\n', formData);
-    const response = await fetch('http://192.168.43.90/MyAPI/api/user/insertdata', options);
+    const response = await fetch('http://localhost/MyAPI/api/user/insertdata', options);
     console.log('\respone form server:--->', response.json);
     const result = await response.json();
     Alert.alert(result);

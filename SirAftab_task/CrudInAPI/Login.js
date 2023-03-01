@@ -14,7 +14,7 @@ const Login = ({navigation}) => {
   const [upswd, setUpswd] = useState('');
 
   const Loginu = async () => {
-    const response = await fetch(`http://192.168.43.90/MyAPI/api/user/Login?name=${uname}&password=${upswd}`);
+    const response = await fetch(`http://localhost/MyAPI/api/user/Login?name=${uname}&password=${upswd}`);
     const data = await response.json();
     console.log(data);
     if (data === true) {

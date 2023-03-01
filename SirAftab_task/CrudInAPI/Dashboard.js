@@ -2,7 +2,6 @@
 import {
   FlatList,
   Image,
-  ScrollView,
   StyleSheet,
   Text,
   View,

@@ -1,6 +1,6 @@
 import React from 'react';
-import Stack_Screens from './SirAftab_task/CrudInAPI/Stack_Screens';
+import Screen_Control from './FYP_1/Screen_Control';
 
 export default function App() {
-  return <Stack_Screens />;
+  return <Screen_Control />;
 }
